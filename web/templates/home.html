@@ -1,0 +1,72 @@
+{% extends "snippets/base.html" %}
+
+{% block title %} 
+Home Page
+{% endblock %}
+{% block links %}
+{% endblock %}
+{% block header %} 
+{% include "snippets/navbar.html" %}
+<style>
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(70vh - 60px); /* Adjust based on the height of your navbar */
+}
+
+.tagline h1 {
+    font-family:'Inter',sans-serif;
+    font-size: 5em;
+    font-weight:400;
+    text-align: center;
+}
+
+.explorebutton {
+    padding-top:10vh;
+    font-family:'Inter',sans-serif;
+    font-size: 3em;
+    font-weight:400;
+    text-align: center;
+}
+.explorebutton a{
+    color:#000;
+}
+@media (max-width:600px) {
+    .tagline h1 {
+        font-size:4em;
+    }
+}
+@media (max-width:500px) {
+    .tagline h1 {
+        font-size:2.5em;
+    }
+    .explorebutton{
+        padding-top:6vh;
+        font-size:2em;
+    }
+}
+@media (max-width:400px) {
+    .tagline h1 {
+        font-size:2em;
+    }
+    .explorebutton{
+        padding-top:3vh;
+        font-size:2em;
+    }
+}
+</style>
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="tagline">
+        <h1> Discover A Better Way <br> To Learn. </h1>
+    </div>
+    <div class="explorebutton">
+        <a href = "/explore" >Let's Go</a>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

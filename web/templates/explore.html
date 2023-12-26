@@ -1,0 +1,42 @@
+{% extends "snippets/base.html" %}
+{% block title %} 
+Explore Content
+{% endblock %}
+{% block links %}
+<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+{% endblock %}
+{% block header %} 
+{% include "snippets/navbar.html" %}
+<style>
+
+.data {
+    font-family:'Inter',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the start */
+    border-bottom: 1px solid #000; /* Underline */
+    padding: 10px 20px; /* Left and right padding */
+    cursor: pointer;
+}
+
+.data h2 {
+    text-align: start; /* Align text to the start */
+}
+
+.content {
+    padding: 10vh 3em 20px 3em; /* Top padding */
+}
+.navigation {
+    padding:0vh 3em 10vh 3em;
+}
+
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="content" hx-get="/navigate/" hx-trigger = "load">
+    <h2> Lets GO!</h2>
+</div> 
+{% endblock %}
+{% block scripts %}
+{% endblock %}

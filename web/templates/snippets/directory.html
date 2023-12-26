@@ -1,0 +1,21 @@
+{% if cwd != "web/static/" %}
+<div class="navigation">
+    <div class = "arrowback data" hx-get = "/back" hx-target = ".content">
+        <h3> ~ Go Back ~ </h3>
+    </div>
+    <div class = "data">
+        <br>
+    </div>
+
+</div>
+{% endif %}
+{% for file in files %}
+<div class="files data" onclick="window.location.href='download/{{file}}'">
+    <h2>{{file}}</h2>
+</div>
+{% endfor %}
+{% for folder in folders %}
+<div class="folder data" hx-get= "navigate/{{folder}}" hx-target=".content">
+    <h2> {{folder}} </h2>
+</div>
+{% endfor %}

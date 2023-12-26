@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} Default Title {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block links %} {% endblock %}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            overflow-x:hidden;
+        }
+        body{
+            height:100vh;
+            width:100vw;
+            background-color:#f2f8ff;
+        }
+    </style>
+
+</head>
+<body>
+        {% block header %} {% endblock %}
+        {% block content %}{% endblock %}
+        {% block scripts %}{% endblock %}
+</body>
+</html>
